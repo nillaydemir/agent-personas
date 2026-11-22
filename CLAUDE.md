@@ -42,6 +42,9 @@ Ortak kurallar agent dosyalarında tekrar edilmez, şu dosyalardadır:
 - Ana oturum, dönen metni `outputs/<senaryo-adi>/` altına,
   `documentation-standards.md` içindeki adlandırma kuralıyla kaydeder
   (örn. `outputs/carpim-tablosu/ba-carpim-tablosu-v1-run1.md`).
+- **`outputs/` altındaki dosyaların üzerine asla yazılmaz.** Kaydetmeden önce hedef
+  dosyanın var olmadığı kontrol edilir. Dosya varsa işlem durur ve kullanıcıya sorulur.
+  (Aşama 2'de bir betik hatası 4 BA dosyasının üzerine yazmıştı.)
 - TA çalıştırılırken ilgili BA dokümanının **dosya yolu** verilir.
 - Her değerlendirme `eval/kontrol-listesi.md` ile puanlanır; persona
   değişiklikleri `eval/degisiklik-gunlugu.md` dosyasına işlenir.

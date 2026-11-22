@@ -4,6 +4,19 @@
 - **Dayanak:** `eval/degerlendirme-v1-ba.md`, `eval/degerlendirme-v1-ta.md`
 - **Durum:** Yalnızca öneri. Henüz hiçbir persona veya rules dosyası değiştirilmedi. Uygulanan her değişiklik `eval/degisiklik-gunlugu.md` dosyasına işlenecek ve ilgili persona sürümü artırılacak (BA v2, TA v2).
 
+## Uygulama durumu (Aşama 3)
+
+| Öneri | Öncelik | Durum |
+|---|---|---|
+| O-1, O-5, BA-1, BA-2, TA-1, TA-2 | Y | **Uygulandı (v2)** (bkz. `eval/degisiklik-gunlugu.md`) |
+| O-2, O-3, O-4, BA-3, BA-4, BA-5, TA-3, TA-4 | O | **Sonraya bırakıldı** |
+| O-6, BA-6, TA-5, TA-6 | D | **Sonraya bırakıldı** |
+| E-1 … E-4 (değerlendirme süreci) | — | **Sonraya bırakıldı.** E-4'ün karşılığı olarak `CLAUDE.md`'ye üzerine yazma yasağı eklendi. |
+
+Not: O-1 öneri metnindeki "CLAUDE.md süreç notlarına atıf yapılmaz" cümlesi O-2'nin bir parçasıydı. Doküman dışı notu kapattığı için O-1 kapsamında `documentation-standards.md`'ye eklendi. O-2'nin CLAUDE.md uyarı satırı uygulanmadı.
+
+---
+
 Öncelik: **Y** = Yüksek (çıktı kalitesini veya TA'ya giden girdiyi doğrudan etkiliyor), **O** = Orta (tutarlılık), **D** = Düşük (biçim).
 
 ## 1. Ortak öneriler (her iki persona)

@@ -28,6 +28,17 @@ Başka bir dokümandaki gereksinime atıf yapılırken aynı ID kullanılır (ID
 
 Örnek: `ba-carpim-tablosu-v1-run1.md`
 
+## Yanıt biçimi
+- Agent'ın yanıtı **yalnızca dokümandan** oluşur: ilk satır doküman başlığıdır
+  (`# ...`), son satır dokümanın son bölümüdür.
+- Doküman başlığından önce veya son bölümden sonra hiçbir metin yazılmaz.
+  Dosya adı veya kayıt yolu önerisi, araç kullanımı, okunan kural dosyaları ya da
+  proje aşamaları hakkında not eklenmez.
+- Dokümanla ilgili bilgiler (ör. açılamayan veya kullanılmayan kaynaklar) doküman
+  içinde ilgili bölüme yazılır: `Varsayımlar`, `Açık sorular` veya `Kaynaklar`.
+- CLAUDE.md'deki proje durumu ve değerlendirme notları görev girdisi değildir;
+  dokümanda bunlara atıf yapılmaz.
+
 ## Doküman başlığı
 Her doküman şu bilgi bloğuyla başlar:
 
