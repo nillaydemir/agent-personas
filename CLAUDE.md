@@ -57,7 +57,35 @@ Ortak kurallar agent dosyalarında tekrar edilmez, şu dosyalardadır:
 Her aşamadan sonra bu dosya güncellenir.
 
 ## Durum
-- Persona sürümleri: BA v1, TA v1
+- Persona sürümleri: **BA v2, TA v2**
+
+### Aşama 3 tamamlandı (2026-11-22)
+- **Uygulanan değişiklikler (v2):** Yalnızca yüksek öncelikli 6 öneri ve 1 süreç kuralı uygulandı:
+  - yanıt yalnızca doküman (O-1),
+  - iddiaların bağlamıyla aktarılması (O-5),
+  - BA zorunlu araştırma başlıkları (BA-1),
+  - BA MoSCoW önceliği (BA-2),
+  - TA seçim ölçütlü kritik kararlar (TA-1),
+  - TA kütüphane izin/sürüm/kısıt kontrolü (TA-2),
+  - `outputs/` üzerine yazma yasağı.
+  - Orta ve düşük öncelikli öneriler sonraya bırakıldı (`eval/aşama-3-yapilacaklar.md`).
+- **Tekrar test:**
+  - BA v2: 2 senaryo × 2 çalıştırma.
+  - TA v2: aynı v1 girdisiyle 1'er ve en iyi BA v2 girdisiyle 1'er çalıştırma.
+  - 8/8 çalıştırmada görev metni birebir gitti, çıktı değiştirilmeden ve yalnızca yeni dosya olarak kaydedildi.
+- **Sonuç:** `eval/karsilastirma-v1-v2.md`, özet `eval/mentor-ozeti.md`.
+  - BA ortalaması 27,0 → 29,0 (çarpım) ve 28,3 → 29,0 (duplicate). TA puanı aynı kaldı.
+  - Doküman dışı not 0/8. Kaynak aktarım hatası 0. FR önceliği 4/4. Video izni 2/2.
+  - Kör değerlendirme (A/B maskeli, depo dışı general-purpose agent): v2'ye 3 kazanç, 1 eşitlik.
+- **Açık kalan sorunlar:**
+  - TA karar değerlerinin tutarlılığı (duplicate'te gruplama ve eşikler).
+  - Platform kararının BA içeriğine duyarlılığı.
+  - ID ve atıf biçimi tutarsızlığı.
+  - Doküman uzunluğu.
+- **Süreç notları:**
+  - Kullanım limiti bir çalıştırma grubunda yalnızca ana oturumun son adımını kesti; subagent çıktıları tamamdı.
+  - WebFetch'in okuyamadığı PDF kaynaklar `pdftotext` ile doğrulandı.
+- Sonraki adım önerileri: `eval/mentor-ozeti.md` → "Sonraki adım önerileri".
 
 ### Aşama 1 tamamlandı (2026-11-22)
 - Yapı, ortak kurallar, BA/TA persona'ları (v1) ve eval şablonları oluşturuldu.
