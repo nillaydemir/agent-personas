@@ -73,3 +73,24 @@ Her aşamadan sonra bu dosya güncellenir.
   uygulanmış görünüyor. Agent'lar ayrıca doküman dışına ana oturum için not ekledi.
   Kayıtta yalnızca doküman gövdesinin alınması gerekir.
 - Sonraki adım: **Aşama 2: İlk testler ve değerlendirme.**
+
+### Aşama 2 devam ediyor (2026-11-22): BA testleri tamamlandı, TA bekliyor
+- BA v1, iki senaryo için 3'er kez çalıştırıldı (`outputs/carpim-tablosu/`,
+  `outputs/duplicate-finder/`). Değerlendirme: `eval/degerlendirme-v1-ba.md`.
+- **Test yöntemi:** Her çalıştırma depoda açılan yeni bir `claude -p` oturumunda
+  tek bir subagent çağrısıyla yapıldı. Görev metninin birebir gittiği ve çıktının
+  değiştirilmeden kaydedildiği oturum kaydından doğrulandı.
+- **Puanlar (/30):** çarpım 27 / 28 / 26; duplicate 28 / 28 / 29.
+- **Önemli bulgular:**
+  - 24 kaynak linkinin 24'ü açıldı; uydurma yok. 4 iddia ise kaynakta yalnızca
+    kısmen destekleniyor.
+  - 6 çalıştırmanın 4'ünde doküman dışına ana oturum notu eklendi.
+  - Varsayım/soru ID'leri ve kabul kriteri biçimi çalıştırmadan çalıştırmaya değişiyor.
+  - Duplicate run2'de Google Play politikası riski eksik.
+- **Ortam notu:** Bu oturumdaki `web-fetch` yardımcı agent'ının WebFetch aracı
+  DNS hatası veriyor. Web erişimi gereken kontroller yeni `claude -p` oturumlarıyla
+  yapılmalı.
+- TA'ya önerilen girdiler (kullanıcı onayı bekleniyor): çarpım **run2**,
+  duplicate **run3**.
+- Persona ve rules dosyaları bu aşamada değiştirilmedi. Önerilen değişiklikler
+  Aşama 3'e bırakıldı.
