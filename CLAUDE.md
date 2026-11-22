@@ -64,9 +64,10 @@ Her aşamadan sonra bu dosya güncellenir.
     Açamadığı sayfaları kaynak göstermedi, araştırma kuralına uydu.
   - TA: BA dokümanını Read ile okudu; dosya yazmadı. 2 kararı FR ID'lerine bağladı
     ve "BA'ya geri sorular" yazdı. Yeni gereksinim eklemedi.
-- **Bilinen kısıt:** Bulut ortamının ağ politikası "limited" ve izinli host yok;
-  WebFetch dış sitelere (wikipedia, todoist, microsoft vb.) proxy tarafından reddedildi.
-  Aşama 2'den önce ortamın ağ erişimi açılmazsa BA kaynak şartını karşılayamaz.
+- **Çözülen kısıt:** Duman testi sırasında bulut ortamının ağ politikası "limited"
+  olduğu için WebFetch dış sitelere (wikipedia, todoist, microsoft vb.) erişemedi.
+  Ağ erişimi 2026-11-22'de "full" yapıldı; bu siteler artık erişilebilir.
+  BA'nın kaynaklı araştırması Aşama 2'de doğrulanacak.
 - **Gözlem (Aşama 2'de izlenecek):** İki agent da "Başlamadan önce" adımındaki
   rules dosyalarını ayrıca Read ile açmadı; kurallar CLAUDE.md importları üzerinden
   uygulanmış görünüyor. Agent'lar ayrıca doküman dışına ana oturum için not ekledi.
