@@ -74,7 +74,31 @@ Her aşamadan sonra bu dosya güncellenir.
   Kayıtta yalnızca doküman gövdesinin alınması gerekir.
 - Sonraki adım: **Aşama 2: İlk testler ve değerlendirme.**
 
-### Aşama 2 devam ediyor (2026-11-22): BA testleri tamamlandı, TA bekliyor
+### Aşama 2 tamamlandı (2026-11-22)
+- **TA testleri:** TA v1, seçilen BA dokümanlarıyla (çarpım **run2**, duplicate **run3**)
+  2'şer kez çalıştırıldı. Değerlendirme: `eval/degerlendirme-v1-ta.md`.
+- **TA puanları (/25):** çarpım 23 / 24; duplicate 24 / 25.
+- **İzlenebilirlik:** 4/4 çalıştırmada eksiksiz (27/27); uydurma FR/NFR yok.
+  Belirsizlikler "geçici" işaretiyle BA'ya soruluyor.
+- **Mimari:** Ürün büyüklüğüne uygun.
+  - Çarpım: sunucusuz web uygulaması, TypeScript, `localStorage`.
+  - Duplicate: tek Flutter uygulaması, `photo_manager`, SQLite, dHash + pHash.
+  - Flutter kısıtına tam uyuldu.
+- **Başlıca sorunlar:**
+  - Doküman dışı not hem BA'da (4/6) hem TA'da (1/4).
+  - ID ve kaynak bölümü biçimi tutarsız.
+  - BA'da kritik araştırma alanları bazen eksik.
+  - BA'da kaynak aktarımında nüans kaybı.
+  - TA'da duplicate algoritma kararları çalıştırmalar arasında değişiyor.
+  - TA'da kütüphane izin kısıtı bir kez gözden kaçtı.
+- **Aşama 3 önerileri:** `eval/aşama-3-yapilacaklar.md` (henüz uygulanmadı;
+  `degisiklik-gunlugu.md`'ye değişiklik yazılmadı).
+- **Süreç notu:** TA çıktıları kaydedilirken ana oturumun betik hatası 4 BA dosyasının
+  üzerine yazdı. Dosyalar git'ten geri yüklendi ve HEAD ile aynı oldukları doğrulandı.
+  TA girdileri etkilenmedi.
+- Sonraki adım: **Aşama 3: İyileştirme ve tekrar test.**
+
+#### Aşama 2 ara notu (BA testleri)
 - BA v1, iki senaryo için 3'er kez çalıştırıldı (`outputs/carpim-tablosu/`,
   `outputs/duplicate-finder/`). Değerlendirme: `eval/degerlendirme-v1-ba.md`.
 - **Test yöntemi:** Her çalıştırma depoda açılan yeni bir `claude -p` oturumunda
@@ -90,7 +114,6 @@ Her aşamadan sonra bu dosya güncellenir.
 - **Ortam notu:** Bu oturumdaki `web-fetch` yardımcı agent'ının WebFetch aracı
   DNS hatası veriyor. Web erişimi gereken kontroller yeni `claude -p` oturumlarıyla
   yapılmalı.
-- TA'ya önerilen girdiler (kullanıcı onayı bekleniyor): çarpım **run2**,
-  duplicate **run3**.
+- TA'ya giden girdiler (kullanıcı onayladı): çarpım **run2**, duplicate **run3**.
 - Persona ve rules dosyaları bu aşamada değiştirilmedi. Önerilen değişiklikler
   Aşama 3'e bırakıldı.
