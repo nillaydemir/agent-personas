@@ -59,11 +59,11 @@ Bu senaryo, Aşama 2 ve 3'teki testlerden farklı yürütüldü. Puanlar bu fark
 | Kriter | run1 | run2 | run3 |
 |---|---|---|---|
 | TA-1 Her BA gereksinimi karşılanmış | 5 | 5 | 5 |
-| TA-2 Uydurma gereksinim yok (5 = hiç yok) | 5 | 5 | 5 |
+| TA-2 Uydurma gereksinim yok (5 = hiç yok) | 4 | 5 | 5 |
 | TA-3 Kararlar gerekçeli | 5 | 5 | 5 |
 | TA-4 Mimari ürün büyüklüğüne uygun | 5 | 5 | 4 |
 | TA-5 İzlenebilirlik tablosu eksiksiz | 5 | 5 | 5 |
-| **Toplam** | **25** | **25** | **24** |
+| **Toplam** | **24** | **25** | **24** |
 
 ### C. Tutarlılık (/15)
 
@@ -144,7 +144,8 @@ Sonuç: 15 iddianın 14'ü doğru, 1'i kısmen doğru. Uydurma kaynak yok.
   - Cevaplanan sorular listeden çıkarıldı, kısmen cevaplananlar daraltıldı.
 
 ### TA
-- **TA-1, TA-2, TA-5:** 3/3 çalıştırmada eksiksiz. Uydurma FR/NFR yok. Tanımsız değerler (ızgara adımı, hatırlatma sayısı, atama kuralı) "geçici" etiketiyle soruya bağlandı.
+- **TA-1, TA-2, TA-5:** 3/3 çalıştırmada eksiksiz. Uydurma FR/NFR yok.
+- **TA-2 düzeltmesi (run1: 5 → 4, sonradan eklendi):** BA run1'de NFR-11 ile US-07 KK-1 ("varsa nedenle birlikte bildirim") çelişiyordu. TA run1 bu çelişkiyi S-08 ile BA'ya sordu. Ancak tasarımı "geçici" işareti koymadan kendi tercihine göre yaptı: "iptal nedeni bildirimde yok" (8.4 ve izlenebilirlik satırı NFR-11). Bu, kapsam kuralındaki "kendi varsayımıyla gereksinime dönüştürmez" ilkesine kısmen aykırıdır. ID kontrolü bu tür sapmayı yakalamıyor; kabul kriteri düzeyinde ayrıca bakılmalı. Tanımsız değerler (ızgara adımı, hatırlatma sayısı, atama kuralı) "geçici" etiketiyle soruya bağlandı.
 - **TA-3 (5/5/5):**
   - Kararlar kaynaklı ve alternatifleriyle karşılaştırılmış. Örnekler:
     - Firestore ve Realtime Database karşılaştırması.
